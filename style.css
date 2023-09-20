@@ -1,0 +1,43 @@
+*{
+   box-sizing:border-box;
+}
+body{
+   margin:0;
+   font-family:sans-serif;
+   background-color:#f5f6f7;
+ }
+.gallery img{
+   /* sets the width of the image to 100% of its parent container, which means the image will take up the entire width available. */
+   width:100%;
+   /* sets the maximum width of the image to 350 pixels. If the parent container is smaller than 350 pixels, the image will shrink to fit. */
+   max-width: 350px;
+   height:370px;
+/* This property is commonly used to create responsive images that maintain their aspect ratio while filling their container12. It’s particularly useful when you want to ensure that images don’t get distorted or stretched out of proportion. */
+   object-fit: cover;
+   border-radius: 10px;
+}
+.gallery {
+   margin:0 auto;
+   padding:20px 10px;
+   max-width:1400px;
+   gap:16px;
+   
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content:center;
+   align-items:center;
+ }
+ /* The ::after pseudo-element in CSS creates a virtual element that is the last child of the selected element1. It is often used to add cosmetic content to an element using the content property. In this case, the content property is set to an empty string, which means no content will be added. The width property is set to 250px, which determines the width of the pseudo-element. */
+ .gallery::after{
+   content:"";
+   width:350px;
+}
+.header{
+   text-align:center;
+   text-transform:uppercase;
+   padding:32px;
+   background-color:#15153e;
+   color:#f3ebeb;
+   border-bottom:4px solid #f0b864;
+ }
